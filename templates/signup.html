@@ -1,0 +1,27 @@
+{% extends 'dummy.html' %}
+
+{% load static %}
+
+{% block title %}
+    <title>LoginPage</title>
+{% endblock %}
+
+{% block body_block %}
+<div class="container ">
+    <div class="row ml-5 mt-5">
+        <form method="POST">
+            {% csrf_token %}
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control " id="username" name="username" >
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control " id="password" name="password">
+                </div>
+                <input type="submit" class="btn btn-primary" value="LogIn">
+        </form>
+    </div>
+</div>
+
+{% endblock %}
